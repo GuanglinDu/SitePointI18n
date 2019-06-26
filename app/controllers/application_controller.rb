@@ -6,7 +6,8 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
 
   def set_locale
-    if cookies[:educator_locale] && I18n.available_locales.include?(cookies[:educator_locale].to_sym)
+    if cookies[:educator_locale] &&
+       I18n.available_locales.include?(cookies[:educator_locale].to_sym)
       l = cookies[:educator_locale].to_sym
     else
       begin

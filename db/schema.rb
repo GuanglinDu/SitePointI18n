@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140908141600) do
 
-  create_table "article_translations", force: true do |t|
+  create_table "article_translations", force: :cascade do |t|
     t.integer  "article_id", null: false
     t.string   "locale",     null: false
     t.datetime "created_at"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20140908141600) do
   add_index "article_translations", ["article_id"], name: "index_article_translations_on_article_id"
   add_index "article_translations", ["locale"], name: "index_article_translations_on_locale"
 
-  create_table "articles", force: true do |t|
+  create_table "articles", force: :cascade do |t|
     t.string   "title"
     t.string   "body"
     t.datetime "created_at"

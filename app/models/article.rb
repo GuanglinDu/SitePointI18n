@@ -8,7 +8,6 @@
 #  created_at :datetime
 #  updated_at :datetime
 #
-
 class Article < ActiveRecord::Base
   translates :title, :body
 end
